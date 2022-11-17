@@ -1,4 +1,4 @@
-# wedding-invitation-brother
+# Wedding Invitation Project
 
 
 
