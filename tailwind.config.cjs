@@ -7,7 +7,11 @@ module.exports = {
     container: {
 	  center: true
 	},
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'body-bg': "url('/src/assets/body-bg.jpg')"
+      }
+    },
   },
   plugins: [],
 }

@@ -1,5 +1,13 @@
 "use strict";
 
+function getTwoDigit(num) {
+	if (num > 9) {
+		return new String(num);
+	}
+	return new String("0" + num);
+}
+
+
 function getTimeRemaining(deadline) {
 	const total = Date.parse(deadline) - Date.parse(new Date());
 	const seconds = Math.floor( (total/1000) % 60 );
@@ -14,4 +22,4 @@ function getTimeRemaining(deadline) {
 	};
 }
 
-export { getTimeRemaining };
+export { getTimeRemaining, getTwoDigit };
