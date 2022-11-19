@@ -6,8 +6,8 @@ import { BsCalendar2DayFill, BsFillGiftFill } from "react-icons/bs";
 import { FaMapMarkerAlt, FaPray } from "react-icons/fa";
 
 function BottomMenu(props) {
-	const normalTabClass = "flex flex-col justify-evenly items-center py-3 px-4 border-t-2 border-transparent hover:text-gray-600 hover:border-gray-300 group outline-none";
-	const activeTabClass = "flex flex-col justify-evenly items-center py-3 px-4 text-blue-600 border-t-2 border-blue-600 active group outline-none";
+	const normalTabClass = "flex flex-col justify-evenly items-center py-3 px-4 border-t-2 border-transparent hover:text-amber-500 hover:border-amber-500 group outline-none ease-in-out duration-200";
+	const activeTabClass = "flex flex-col justify-evenly items-center py-3 px-4 text-amber-600 border-t-2 border-amber-600 active group outline-none ease-in-out duration-200";
 
 	const [tab, setTab] = useState([
 		{
@@ -72,8 +72,8 @@ function BottomMenu(props) {
 	});
 	
 	return (
-		<div className="border-t border-gray-200 bg-white fixed bottom-0 left-0 right-0 overflow-x-auto z-index-5">
-			<ul className="flex justify-center min-w-fit text-sm font-medium text-center text-gray-500">
+		<div className="border-t border-yellow-800 bg-yellow-900 fixed bottom-0 left-0 right-0 overflow-x-auto z-index-5">
+			<ul className="flex justify-center min-w-fit text-sm font-medium text-center text-amber-300">
 				{tabList}
 			</ul>
 		</div>

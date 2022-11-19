@@ -17,7 +17,7 @@ function InvitationContent(props) {
 		<div>
 			{/* <HomePage /> */}
 			{/* <Couple /> */}
-			<WeddingEvent />
+			{/* <WeddingEvent /> */}
 			{/* <Location /> */}
 			{/* <Doa /> */}
 			{/* <Gifts /> */}
