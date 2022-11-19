@@ -36,7 +36,7 @@ function BottomMenu(props) {
 			active: false
 		},
 		{
-			name: "Gifts",
+			name: "Gift",
 			icon: <BsFillGiftFill />,
 			active: false
 		},
@@ -72,7 +72,7 @@ function BottomMenu(props) {
 	});
 	
 	return (
-		<div className="border-t border-amber-900/90 bg-amber-900/90 fixed bottom-0 left-0 right-0 overflow-x-auto z-index-5">
+		<div className="border-t bg-gradient-to-t from-amber-900 to-amber-800 border-amber-900 bg-amber-900 fixed bottom-0 left-0 right-0 overflow-x-auto z-index-5">
 			<ul className="flex justify-center min-w-fit text-sm font-medium text-center text-amber-300">
 				{tabList}
 			</ul>

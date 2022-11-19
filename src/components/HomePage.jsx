@@ -47,7 +47,7 @@ function HomePage(props) {
 		<div className="min-w-fit min-h-screen flex justify-center items-center relative z-index-0 h-fit px-2 text-white">
 			<div className="container bg-yellow-800/50 max-w-4xl md:mx-auto py-10 my-24 text-center relative z-index-1">
 				<img alt="Couple Illustration" src="/src/assets/arabic-bride.png" className="w-96 h-auto mx-auto"/>
-				<h1 className="font-semibold text-3xl my-2">Muhammad & Khadijah</h1>
+				<h1 className="font-semibold text-3xl my-2 font-[kaushan]">Muhammad & Khadijah</h1>
 				<h3 className="text-yellow-800 text-xl font-semibold underline">
 					{dayWeek} {monthName} {yearNum}
 				</h3>

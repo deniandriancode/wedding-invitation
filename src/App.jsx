@@ -8,19 +8,19 @@ import Couple from "./components/Couple";
 import WeddingEvent from "./components/WeddingEvent";
 import Location from "./components/Location";
 import Doa from "./components/Doa";
-import Gifts from "./components/Gifts";
+import Gift from "./components/Gift";
 import BottomMenu from "./components/BottomMenu";
 import MainHomePage from "./components/MainHomePage";
 
 function InvitationContent(props) {
 	return (
 		<div>
-			<HomePage />
+			{/* <HomePage /> */}
 			{/* <Couple /> */}
 			{/* <WeddingEvent /> */}
 			{/* <Location /> */}
-			{/* <Doa /> */}
-			{/* <Gifts /> */}
+			<Doa />
+			{/* <Gift /> */}
 		</div>
 	);
 }
