@@ -15,7 +15,7 @@ import MainHomePage from "./components/MainHomePage";
 function InvitationContent(props) {
 	return (
 		<div>
-			{/* <HomePage /> */}
+			<HomePage />
 			{/* <Couple /> */}
 			{/* <WeddingEvent /> */}
 			{/* <Location /> */}
