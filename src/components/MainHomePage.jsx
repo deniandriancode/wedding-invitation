@@ -7,6 +7,7 @@ function Overlay(props) {
 function MainHomePage(props) {
 	return (
 		<div className="min-w-fit relative z-index-0 min-h-screen bg-cover bg-center bg-no-repeat bg-fixed">
+		{/* <div className="min-w-fit relative z-index-0 min-h-screen bg-[url('/src/assets/body-bg.jpg')] bg-cover bg-center bg-no-repeat bg-fixed"> */}
 			<Overlay />
 			<div className="container text-center px-2 md:px-0 absolute z-index-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
 				<img alt="Couple Illustration" src="/src/assets/placeholder.png" className="w-36 h-auto mx-auto my-3"/>
