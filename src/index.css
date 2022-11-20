@@ -11,13 +11,19 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'uthmanic';
     src: url('assets/kfgqpc_uthmanic_script_hafs_regular-webfont.woff2') format('woff2'),
          url('assets/kfgqpc_uthmanic_script_hafs_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'yaquote';
+    src: url('assets/yaquotescript_personaluse-webfont.woff2') format('woff2'),
+         url('assets/yaquotescript_personaluse-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 

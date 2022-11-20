@@ -27,21 +27,21 @@ function HomePage(props) {
 		seconds
 	});
 
-	// useEffect(() => {
-	// 	setInterval(() => {
-	// 		const remaining_l = getTimeRemaining(eventDateString);
-	// 		const days_l = remaining_l.days;
-	// 		const hours_l = remaining_l.hours;
-	// 		const minutes_l = remaining_l.minutes;
-	// 		const seconds_l = remaining_l.seconds;
-	// 		setTimeRemain({
-	// 			days: days_l,
-	// 			hours: hours_l,
-	// 			minutes: minutes_l,
-	// 			seconds: seconds_l,
-	// 		});
-	// 	}, 1000);
-	// });
+     useEffect(() => {
+         setInterval(() => {
+             const remaining_l = getTimeRemaining(eventDateString);
+             const days_l = remaining_l.days;
+             const hours_l = remaining_l.hours;
+             const minutes_l = remaining_l.minutes;
+             const seconds_l = remaining_l.seconds;
+             setTimeRemain({
+                 days: days_l,
+                 hours: hours_l,
+                 minutes: minutes_l,
+                 seconds: seconds_l,
+             });
+         }, 1000);
+     });
 	
 	return (
 		<div className="min-w-fit min-h-screen flex justify-center items-center relative z-index-0 h-fit px-2 text-white">

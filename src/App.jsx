@@ -19,7 +19,7 @@ function InvitationContent(props) {
 			{/* <Couple /> */}
 			{/* <WeddingEvent /> */}
 			{/* <Location /> */}
-			<Doa />
+            {/* <Doa /> */}
 			{/* <Gift /> */}
 		</div>
 	);
@@ -28,9 +28,9 @@ function InvitationContent(props) {
 function App() {
 	return (
 		<div>
-			<InvitationContent />
-			<BottomMenu />
-			{/* <MainHomePage /> */}
+			{/* <InvitationContent /> */}
+			{/* <BottomMenu /> */}
+			<MainHomePage />
 		</div>
 	);
 }

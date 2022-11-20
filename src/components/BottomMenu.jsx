@@ -3,6 +3,7 @@ import { useState } from "react";
 import { MdHome } from "react-icons/md";
 import { AiFillHeart } from "react-icons/ai";
 import { BsCalendar2DayFill, BsFillGiftFill } from "react-icons/bs";
+import { IoHandLeft, IoHandRight } from "react-icons/io5";
 import { FaMapMarkerAlt, FaPray } from "react-icons/fa";
 
 function BottomMenu(props) {
@@ -12,32 +13,32 @@ function BottomMenu(props) {
 	const [tab, setTab] = useState([
 		{
 			name: "Home",
-			icon: <MdHome />,
+			icon: [<MdHome />],
 			active: true
 		},
 		{
 			name: "Couple",
-			icon: <AiFillHeart />,
+			icon: [<AiFillHeart />],
 			active: false
 		},
 		{
 			name: "Event",
-			icon: <BsCalendar2DayFill />,
+			icon: [<BsCalendar2DayFill />],
 			active: false
 		},
 		{
 			name: "Location",
-			icon: <FaMapMarkerAlt />,
+			icon: [<FaMapMarkerAlt />],
 			active: false
 		},
 		{
 			name: "Doa",
-			icon: <FaPray />,
+			icon: [<IoHandRight />, <IoHandLeft />],
 			active: false
 		},
 		{
 			name: "Gift",
-			icon: <BsFillGiftFill />,
+			icon: [<BsFillGiftFill />],
 			active: false
 		},
 	]);
@@ -64,7 +65,7 @@ function BottomMenu(props) {
 					className={item.active ? activeTabClass : normalTabClass}
 					onClick={handleClick}
 				>
-					<span className="text-2xl">{item.icon}</span>
+					<span className="text-2xl inline-flex">{item.icon.map(ic => ic)}</span>
 					<span className="text-xs">{item.name}</span>
 				</button>
 			</li>
@@ -72,7 +73,7 @@ function BottomMenu(props) {
 	});
 	
 	return (
-		<div className="border-t bg-gradient-to-t from-amber-900 to-amber-800 border-amber-900 bg-amber-900 fixed bottom-0 left-0 right-0 overflow-x-auto z-index-5">
+		<div className="border-t bg-gradient-to-t from-amber-900 to-amber-800 border-amber-900 fixed bottom-0 left-0 right-0 overflow-x-auto z-index-5">
 			<ul className="flex justify-center min-w-fit text-sm font-medium text-center text-amber-300">
 				{tabList}
 			</ul>
