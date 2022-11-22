@@ -1,8 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import { encrypt, decrypt } from "./utils/cryptography.js";
 import { getQueryString } from "./utils/urlquery.js";
 
+import { MdHome } from "react-icons/md";
+import { AiFillHeart } from "react-icons/ai";
+import { BsCalendar2DayFill, BsFillGiftFill } from "react-icons/bs";
+import { IoHandLeft, IoHandRight } from "react-icons/io5";
+import { FaMapMarkerAlt, FaPray } from "react-icons/fa";
+
+import AudioBackground from "./components/AudioBackground";
 import HomePage from "./components/HomePage";
 import Couple from "./components/Couple";
 import WeddingEvent from "./components/WeddingEvent";
@@ -12,25 +19,84 @@ import Gift from "./components/Gift";
 import BottomMenu from "./components/BottomMenu";
 import MainHomePage from "./components/MainHomePage";
 
+const initPages = [
+        <HomePage />,
+        <Couple />,
+        <WeddingEvent />,
+        <Location />,
+        <Doa />,
+        <Gift />
+];
+
+const initTabs = [
+    {
+        name: "Home",
+        icon: [<MdHome />],
+        active: true
+    },
+    {
+        name: "Couple",
+        icon: [<AiFillHeart />],
+        active: false
+    },
+    {
+        name: "Event",
+        icon: [<BsCalendar2DayFill />],
+        active: false
+    },
+    {
+        name: "Location",
+        icon: [<FaMapMarkerAlt />],
+        active: false
+    },
+    {
+        name: "Doa",
+        icon: [<IoHandRight />, <IoHandLeft />],
+        active: false
+    },
+    {
+        name: "Gift",
+        icon: [<BsFillGiftFill />],
+        active: false
+    },
+]
+
 function InvitationContent(props) {
+    const page = props.page;
 	return (
 		<div>
-			{/* <HomePage /> */}
-			{/* <Couple /> */}
-			{/* <WeddingEvent /> */}
-			{/* <Location /> */}
-            {/* <Doa /> */}
-			{/* <Gift /> */}
+            {page}
 		</div>
 	);
 }
 
 function App() {
+    const [tabs, setTabs] = useState(initTabs);
+    const [page, setPage] = useState(initPages[4]);
+
+    function handleSetTabs(event) {
+		let target = event.target;
+		while (target.tagName !== "BUTTON") {
+			target = target.parentElement;
+		}
+		setTabs(prev => {
+			return prev.map((item, index) => {
+				if (target.children[1].textContent === item.name) {
+                    setPage(initPages[index]);
+					return {...item, active: true};
+				}
+				return {...item, active: false};
+			});
+		});
+
+    }
+
 	return (
 		<div>
-			{/* <InvitationContent /> */}
-			{/* <BottomMenu /> */}
-			<MainHomePage />
+            {/* <AudioBackground /> */} {/* move to bottom menu, autoplay is not suitable */}
+			<InvitationContent page={page} />
+			<BottomMenu tabs={tabs} handleClick={handleSetTabs} />
+            {/* <MainHomePage /> */}
 		</div>
 	);
 }

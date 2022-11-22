@@ -2,7 +2,7 @@ function Couple(props) {
 	return (
 		<div className="min-w-fit flex flex-col justify-center items-center -mt-10 relative z-index-0 h-max px-2 bg-cover bg-center bg-no-repeat bg-fixed">
 			<div className="container rounded-md flex flex-col gap-8 items-center box-border justify-center shadow-md border-8 border-yellow-800/75 max-w-xl md:mx-auto bg-yellow-100/75 h-max py-24 my-24 text-center relative z-index-1 px-2 md:px-8">
-				<h1 dir="rtl" className="font-[uthmanic]">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْمِ</h1>
+				<h1 dir="rtl" className="font-[sans]">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْمِ</h1>
 				<h2 className="">Assalamualaikum Warahmatullahi Wabarakatuh</h2>
 				<p>Maha suci Allah Subhanahu wa ta'ala yang telah menciptakan makhluk-Nya berpasang-pasangan.</p>
 				<p dir="rtl" className="">

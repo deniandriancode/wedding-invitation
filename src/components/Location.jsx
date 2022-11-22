@@ -1,7 +1,7 @@
 function Location(props) {
 	return (
 		<div className="min-w-fit text-white flex items-center -mt-10 relative z-index-0 min-h-screen px-2 bg-cover bg-center bg-no-repeat bg-fixed">
-			<div className="container bg-yellow-800/50 border-8 border-yellow-200/75 rounded-md px-5 py-8 max-w-4xl md:mx-auto h-max my-24 text-center relative z-index-1">
+			<div className="container bg-yellow-800 border-8 border-yellow-200/75 rounded-md px-5 py-8 max-w-4xl md:mx-auto h-max my-24 text-center relative z-index-1">
 				<h1 className="font-bold text-4xl my-5">LOKASI</h1>
 				<p className="italic mb-8 text-sm">Lihatlah peta, jangan sampai nyasar ke kondangan orang</p>
 				<div style={{width: "100%"}}>

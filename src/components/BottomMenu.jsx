@@ -1,64 +1,13 @@
 import { useState } from "react";
 
-import { MdHome } from "react-icons/md";
-import { AiFillHeart } from "react-icons/ai";
-import { BsCalendar2DayFill, BsFillGiftFill } from "react-icons/bs";
-import { IoHandLeft, IoHandRight } from "react-icons/io5";
-import { FaMapMarkerAlt, FaPray } from "react-icons/fa";
-
 function BottomMenu(props) {
 	const normalTabClass = "flex flex-col justify-evenly items-center py-3 px-4 border-t-2 border-transparent hover:text-amber-500 hover:border-amber-500 group outline-none ease-in-out duration-200";
 	const activeTabClass = "flex flex-col justify-evenly items-center py-3 px-4 text-amber-600 border-t-2 border-amber-600 active group outline-none ease-in-out duration-200";
 
-	const [tab, setTab] = useState([
-		{
-			name: "Home",
-			icon: [<MdHome />],
-			active: true
-		},
-		{
-			name: "Couple",
-			icon: [<AiFillHeart />],
-			active: false
-		},
-		{
-			name: "Event",
-			icon: [<BsCalendar2DayFill />],
-			active: false
-		},
-		{
-			name: "Location",
-			icon: [<FaMapMarkerAlt />],
-			active: false
-		},
-		{
-			name: "Doa",
-			icon: [<IoHandRight />, <IoHandLeft />],
-			active: false
-		},
-		{
-			name: "Gift",
-			icon: [<BsFillGiftFill />],
-			active: false
-		},
-	]);
+    const tabs = props.tabs;
+    const handleClick = props.handleClick;
 
-	function handleClick(event) {
-		let target = event.target;
-		while (target.tagName !== "BUTTON") {
-			target = target.parentElement;
-		}
-		setTab(prev => {
-			return prev.map(item => {
-				if (target.children[1].textContent === item.name) {
-					return {...item, active: true};
-				}
-				return {...item, active: false};
-			});
-		});
-	}
-
-	const tabList = tab.map((item, index) => {
+	const tabList = tabs.map((item, index) => {
 		return (
 			<li className="mr-2" key={index}>
 				<button

@@ -44,12 +44,12 @@ function HomePage(props) {
      });
 	
 	return (
-		<div className="min-w-fit min-h-screen flex justify-center items-center relative z-index-0 h-fit px-2 text-white">
-			<div className="container bg-yellow-800/50 max-w-4xl md:mx-auto py-10 my-24 text-center relative z-index-1">
-				<img alt="Couple Illustration" src="/src/assets/arabic-bride.png" className="w-96 h-auto mx-auto"/>
-				<h1 className="font-semibold text-3xl my-2 font-[kaushan]">Muhammad & Khadijah</h1>
+		<div className="min-w-fit min-h-screen h-fit flex justify-center items-center relative z-index-0 h-fit px-2 bg-yellow-900 text-white">
+			<div className="container bg-yellow-100 max-w-4xl md:mx-auto py-10 my-24 rounded-md text-center relative z-index-1">
+				<img alt="Couple Illustration" src="/src/assets/arabic-bride.png" className="w-96 h-auto mx-auto drop-shadow-md"/>
+				<h1 className="text-5xl my-2 font-[yaquote] text-yellow-800">Muhammad<br/>&<br/>Khadijah</h1>
 				<h3 className="text-yellow-800 text-xl font-semibold underline">
-					{dayWeek} {monthName} {yearNum}
+                    21 Sya'ban 1444 H - {dayWeek} {monthName} {yearNum}
 				</h3>
 				<p className="flex justify-center font-semibold text-xl">
 					<span className="inline-block px-3 py-1 mx-1 bg-yellow-800 rounded shadow-md mt-3">
