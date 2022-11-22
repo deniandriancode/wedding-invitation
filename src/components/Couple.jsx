@@ -19,7 +19,7 @@ function Couple(props) {
 					<p className="italic text-sm">Putra Ke Dua dari<br/>Abu Salamah dan Ummu Salamah</p>
 				</div>
 				<div className="flex flex-col items-center box-border justify-center w-full bg-yellow-800/75 rounded-md shadow-md border-8 border-yellow-200/75 px-5 md:px-15 py-5">
-					<img src="/src/assets/arabic-woman-2.jpeg" alt="Muslim Woman" className="w-full h-fit" />
+					<img src="/src/assets/arabic-woman-2-crop.png" alt="Muslim Woman" className="w-[70%] h-fit my-5" />
 					<h1 className="font-[kaushan]">Khadijah</h1>
 					<h1>Khadijah bintu Yusuf</h1>
 					<p className="italic text-sm">Putri Ke Pertama dari<br/>Abu Khadijah dan Ummu Khadijah</p>
