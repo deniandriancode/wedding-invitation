@@ -10,10 +10,10 @@ function Couple(props) {
 	return (
 		<div className="min-w-fit flex flex-col box-border justify-center items-center -mt-10 relative z-index-0 h-max px-2 bg-yellow-100 bg-[url('/assets/main-homepage-frame.png')] bg-cover bg-center bg-no-repeat">
 			<div className="animate__animated animate__fadeIn container rounded-md flex flex-col gap-8 items-center box-border justify-center shadow-md border-4 border-yellow-700 max-w-xl md:mx-auto bg-amber-100 h-max py-24 my-24 text-center relative z-index-1 px-2 md:px-8">
-				<h1 dir="rtl" className="font-['amiri_quran']">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْمِ</h1>
+				<h1 dir="rtl" className="font-[Amiri]">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْمِ</h1>
 				<h2 className="">Assalamualaikum Warahmatullahi Wabarakatuh</h2>
 				<p>Maha suci Allah Subhanahu wa ta'ala yang telah menciptakan makhluk-Nya berpasang-pasangan.</p>
-				<p dir="rtl" className="font-[amiri_quran]">
+				<p dir="rtl" className="font-[Amiri]">
 وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ ﴿ ٢١﴾
 				</p>
 				<p>Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir. (Ar Rum 30:21)</p>
