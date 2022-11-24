@@ -13,10 +13,10 @@ function MainHomePage(props) {
 				<p className="italic my-1">Kepada Yth Bapak/Ibu/Saudara/I</p>
 				<p className="text-lg underline">Umar bin Abdul Manaf</p>
 				<p className="italic my-1 text-sm my-2">Kami mengundang anda untuk menghadiri momen bahagia ini</p>
-				<a href="#" className="inline-flex items-center gap-2 bg-yellow-800 text-yellow-100 shadow-lg hover:bg-yellow-900 focus:ring focus:ring-yellow-700 px-5 py-2 rounded-md ease-in-out duration-200">
+				<button onClick={props.onOpenInvitation} className="inline-flex items-center gap-2 bg-yellow-800 text-yellow-100 shadow-lg hover:bg-yellow-900 focus:ring focus:ring-yellow-700 px-5 py-2 rounded-md ease-in-out duration-200">
 					<RiDoorOpenFill />
 					Buka Undangan
-				</a>
+				</button>
 			</div>
 		</div>
 	);

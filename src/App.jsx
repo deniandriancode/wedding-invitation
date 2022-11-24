@@ -72,7 +72,8 @@ function InvitationContent(props) {
 
 function App() {
     const [tabs, setTabs] = useState(initTabs);
-    const [page, setPage] = useState(initPages[2]);
+    const [page, setPage] = useState(initPages[0]);
+    const [invitationOpen, setInvitationOpen] = useState(false);
 
     function handleSetTabs(event) {
 		let target = event.target;
@@ -91,12 +92,20 @@ function App() {
 
     }
 
+    function handleOpenInvitation() {
+        setInvitationOpen(true);
+    }
+
 	return (
 		<div className="font-serif">
             {/* <AudioBackground /> */} {/* move to bottom menu, autoplay is not suitable */}
-            <InvitationContent page={page} /> 
-            <BottomMenu tabs={tabs} handleClick={handleSetTabs} /> 
-            {/* <MainHomePage /> */} 
+            {!invitationOpen && <MainHomePage onOpenInvitation={handleOpenInvitation} />}
+            {invitationOpen && 
+                <>
+                    <InvitationContent page={page} /> 
+                    <BottomMenu tabs={tabs} handleClick={handleSetTabs} /> 
+                </>
+            }
 		</div>
 	);
 }

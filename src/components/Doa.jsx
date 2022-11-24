@@ -15,7 +15,7 @@ function CommentList(props) {
                 <p className="py-2 amiri_quran">{item.content}</p>
             </li>
         );
-    });
+    }).reverse();
     return (
         <ul className="bg-amber-200 px-2 py-1 my-10 text-start rounded-md">
             {commentElement}
@@ -36,7 +36,11 @@ function Doa(props) {
         event.preventDefault();
         const newDoa = doa;
         setDoa("");
-        console.log(newDoa);
+        setCommentList([...commentList, {
+            username: "Default",
+            content: newDoa,
+            date: "21 September 2022 08:13 AM"
+        }]);
     }
 
 	return (
