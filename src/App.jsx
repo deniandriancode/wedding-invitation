@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import { encrypt, decrypt } from "./utils/cryptography.js";
 import { getQueryString } from "./utils/urlquery.js";
+import "./utils/userinteraction.js";
 
 import { MdHome } from "react-icons/md";
 import { AiFillHeart } from "react-icons/ai";
@@ -98,7 +99,7 @@ function App() {
 
 	return (
 		<div className="font-serif">
-            {/* <AudioBackground /> */} {/* move to bottom menu, autoplay is not suitable */}
+            <AudioBackground /> {/* move to bottom menu, autoplay is not suitable */}
             {!invitationOpen && <MainHomePage onOpenInvitation={handleOpenInvitation} />}
             {invitationOpen && 
                 <>

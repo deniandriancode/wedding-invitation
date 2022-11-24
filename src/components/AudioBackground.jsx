@@ -4,14 +4,22 @@ import { useEffect } from "react";
             //<source src="/src/assets/qaf.m4a" type="audio/mpeg"></source>
         //</audio>
 function AudioBackground() {
-        document.addEventListener("DOMContentLoaded", () => {
-            console.log(123123);
-        });
     useEffect(() => {
-        let audioBG = document.querySelector("#backsound");
+        const activityEvents = [
+            'mousedown', 'mousemove', 'keydown',
+            'scroll', 'touchstart'
+        ];
+
+        for (let i in activityEvents) {
+            document.addEventListener(activityEvents[i], () => {
+                document.querySelector("#backsound").play();
+            });
+        }
     }, []);
     return (
-        <video id="backsound" src="/src/assets/qaf.m4a" muted loop type="audio/mpeg" controls></video>
+        <audio id="backsound" autoPlay loop controls className="fixed w-0 h-0">
+            <source src="/src/assets/qaf.m4a" type="audio/mpeg"></source>
+        </audio>
     );
 }
 
