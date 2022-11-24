@@ -45,7 +45,7 @@ function HomePage(props) {
 	
 	return (
 		<div className="min-w-fit text-yellow-200 flex items-center -mt-10 relative z-index-0 min-h-screen px-2 bg-yellow-100 bg-[url('/src/assets/main-homepage-frame.png')] bg-cover bg-center bg-no-repeat">
-			<div className="container flex flex-col gap-5 items-center bg-yellow-900 border-8 border-yellow-200/75 rounded-md px-5 py-8 max-w-4xl md:mx-auto h-max my-24 text-center relative z-index-1">
+			<div className="animate__animated animate__fadeIn container flex flex-col gap-5 items-center bg-yellow-900 bg-[url('')] bg-center bg-no-repeat bg-cover border-8 border-yellow-200/75 rounded-md px-5 py-8 max-w-4xl md:mx-auto h-max my-24 text-center relative z-index-1">
                 <img src="/src/assets/arabic-bride.png" alt="Couple Illustration" className="drop-shadow-lg" />
 				<h1 className="text-5xl md:text-7xl my-2 font-[yaquote]">Muhammad<br/>&<br/>Khadijah</h1>
 				<a href="https://calendar.google.com/calendar/u/0/r/week/2023/3/13?pli=1" target="_blank" title="Click to open calendar" className="text-amber-400 text-xl font-semibold underline">
