@@ -27,22 +27,22 @@ function HomePage(props) {
 		seconds
 	});
 
-     //useEffect(() => {
-         //window.scrollTo(0, 0);
-         //setInterval(() => {
-             //const remaining_l = getTimeRemaining(eventDateString);
-             //const days_l = remaining_l.days;
-             //const hours_l = remaining_l.hours;
-             //const minutes_l = remaining_l.minutes;
-             //const seconds_l = remaining_l.seconds;
-             //setTimeRemain({
-                 //days: days_l,
-                 //hours: hours_l,
-                 //minutes: minutes_l,
-                 //seconds: seconds_l,
-             //});
-         //}, 1000);
-     //}, []);
+     useEffect(() => {
+         window.scrollTo(0, 0);
+         setInterval(() => {
+             const remaining_l = getTimeRemaining(eventDateString);
+             const days_l = remaining_l.days;
+             const hours_l = remaining_l.hours;
+             const minutes_l = remaining_l.minutes;
+             const seconds_l = remaining_l.seconds;
+             setTimeRemain({
+                 days: days_l,
+                 hours: hours_l,
+                 minutes: minutes_l,
+                 seconds: seconds_l,
+             });
+         }, 1000);
+     }, []);
 	
 	return (
 		<div className="min-w-fit text-yellow-200 flex items-center -mt-10 relative z-index-0 min-h-screen px-2 bg-yellow-100 bg-[url('/src/assets/main-homepage-frame.png')] bg-cover bg-center bg-no-repeat">

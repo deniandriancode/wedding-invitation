@@ -7,7 +7,7 @@ function Overlay(props) {
 
 function MainHomePage(props) {
 	return (
-		<div className="min-w-fit relative box-border py-12 z-index-0 min-h-screen px-2 bg-gradient-to-b from-amber-800 to-amber-900">
+		<div className="min-w-fit relative box-border py-12 z-index-0 min-h-screen px-2 bg-gradient-to-b from-amber-800 to-amber-900 bg-[url('/src/assets/main-homepage-bg.png')] bg-center bg-cover bg-no-repeat">
 			<div className="container w-fit md:w-max rounded-md shadow-md text-yellow-800 flex flex-col bg-amber-100 bg-[url('/src/assets/main-homepage-frame.png')] bg-center bg-no-repeat bg-cover gap-3 items-center justify-center text-center px-2 md:px-24 relative w-auto h-screen z-index-1">
 				<h1 className="text-5xl md:text-8xl drop-shadow-lg font-[yaquote]">Muhammad<br/>&<br/>Khadijah</h1>
 				<p className="italic my-1">Kepada Yth Bapak/Ibu/Saudara/I</p>

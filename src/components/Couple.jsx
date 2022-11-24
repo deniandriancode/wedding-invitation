@@ -29,7 +29,7 @@ function Couple(props) {
                         <p className="italic text-sm">Putra Ke Dua dari<br/>Abu Salamah dan Ummu Salamah</p>
                     </AnimationOnScroll>
                     <AnimationOnScroll className="flex flex-col gap-3 items-center box-border justify-center w-full bg-yellow-800 rounded-md shadow-md border-2 border-yellow-200/75 px-5 md:px-15 py-5" animateIn="animate__bounceIn">
-                        <img src="/src/assets/arabic-woman-2.png" alt="Muslim Woman" className="w-[55%] h-fit" />
+                        <img src="/src/assets/arabic-woman-2-crop.png" alt="Muslim Woman" className="w-[70%] h-fit mb-5" />
                         <h1 className="font-[yaquote] text-3xl md:text-4xl border-b">Khadijah</h1>
                         <h1 className="font-semibold">Khadijah binti Abdul Manaf</h1>
                         <p className="italic text-sm">Putri Ke Pertama dari<br/>Abu Khadijah dan Ummu Khadijah</p>
