@@ -72,7 +72,7 @@ function InvitationContent(props) {
 
 function App() {
     const [tabs, setTabs] = useState(initTabs);
-    const [page, setPage] = useState(initPages[4]);
+    const [page, setPage] = useState(initPages[2]);
 
     function handleSetTabs(event) {
 		let target = event.target;
@@ -92,11 +92,11 @@ function App() {
     }
 
 	return (
-		<div>
+		<div className="font-serif">
             {/* <AudioBackground /> */} {/* move to bottom menu, autoplay is not suitable */}
-			<InvitationContent page={page} />
-			<BottomMenu tabs={tabs} handleClick={handleSetTabs} />
-            {/* <MainHomePage /> */}
+            <InvitationContent page={page} /> 
+            <BottomMenu tabs={tabs} handleClick={handleSetTabs} /> 
+            {/* <MainHomePage /> */} 
 		</div>
 	);
 }

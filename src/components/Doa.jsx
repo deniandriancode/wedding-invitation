@@ -9,7 +9,7 @@ function CommentList(props) {
                     <span className="mr-3">{item.username}</span>
                     <span className="text-xs">{item.date}</span>
                 </p>
-                <p className="py-2">{item.content}</p>
+                <p className="py-2 amiri_quran">{item.content}</p>
             </li>
         );
     });
@@ -22,33 +22,7 @@ function CommentList(props) {
 
 function Doa(props) {
     const commentList = commentListData;
-    //const commentList = [
-        //{
-            //username: "John Doe",
-            //content: "بَارَكَ اللهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
-            //date: "21 September 2022 08:32 AM"
-        //},
-        //{
-            //username: "John Doe",
-            //content: "بَارَكَ اللهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
-            //date: "21 September 2022 08:32 AM"
-        //},
-        //{
-            //username: "John Doe",
-            //content: "بَارَكَ اللهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
-            //date: "21 September 2022 08:32 AM"
-        //},
-        //{
-            //username: "John Doe",
-            //content: "بَارَكَ اللهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
-            //date: "21 September 2022 08:32 AM"
-        //},
-        //{
-            //username: "John Doe",
-            //content: "بَارَكَ اللهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
-            //date: "21 September 2022 08:32 AM"
-        //},
-    //];
+
 	return (
 		<div className="min-w-fit box-border flex items-center -mt-10 relative z-index-0 min-h-screen h-fit px-2 text-white box-border">
 			<div className="container bg-yellow-800 border-8 px-2 border-yellow-200 rounded-md max-w-4xl md:mx-auto min-h-screen h-fit my-24 text-center relative z-index-1">

@@ -27,50 +27,50 @@ function HomePage(props) {
 		seconds
 	});
 
-     useEffect(() => {
-         setInterval(() => {
-             const remaining_l = getTimeRemaining(eventDateString);
-             const days_l = remaining_l.days;
-             const hours_l = remaining_l.hours;
-             const minutes_l = remaining_l.minutes;
-             const seconds_l = remaining_l.seconds;
-             setTimeRemain({
-                 days: days_l,
-                 hours: hours_l,
-                 minutes: minutes_l,
-                 seconds: seconds_l,
-             });
-         }, 1000);
-     });
+     //useEffect(() => {
+         //setInterval(() => {
+             //const remaining_l = getTimeRemaining(eventDateString);
+             //const days_l = remaining_l.days;
+             //const hours_l = remaining_l.hours;
+             //const minutes_l = remaining_l.minutes;
+             //const seconds_l = remaining_l.seconds;
+             //setTimeRemain({
+                 //days: days_l,
+                 //hours: hours_l,
+                 //minutes: minutes_l,
+                 //seconds: seconds_l,
+             //});
+         //}, 1000);
+     //});
 	
 	return (
-		<div className="min-w-fit min-h-screen h-fit flex justify-center items-center relative z-index-0 h-fit px-2 bg-yellow-900 text-white">
-			<div className="container bg-yellow-100 max-w-4xl md:mx-auto py-10 my-24 rounded-md text-center relative z-index-1">
-				<img alt="Couple Illustration" src="/src/assets/arabic-bride.png" className="w-96 h-auto mx-auto drop-shadow-md"/>
-				<h1 className="text-5xl my-2 font-[yaquote] text-yellow-800">Muhammad<br/>&<br/>Khadijah</h1>
-				<h3 className="text-yellow-800 text-xl font-semibold underline">
+		<div className="min-w-fit text-yellow-200 flex items-center -mt-10 relative z-index-0 min-h-screen px-2 bg-yellow-100 bg-[url('/src/assets/main-homepage-frame.png')] bg-cover bg-center bg-no-repeat">
+			<div className="container flex flex-col gap-5 items-center bg-yellow-900 border-8 border-yellow-200/75 rounded-md px-5 py-8 max-w-4xl md:mx-auto h-max my-24 text-center relative z-index-1">
+                <img src="/src/assets/arabic-bride.png" alt="Couple Illustration" className="drop-shadow-lg" />
+				<h1 className="text-5xl md:text-7xl my-2 font-[yaquote]">Muhammad<br/>&<br/>Khadijah</h1>
+				<a href="https://calendar.google.com/calendar/u/0/r/week/2023/3/13?pli=1" target="_blank" title="Click to open calendar" className="text-amber-400 text-xl font-semibold underline">
                     21 Sya'ban 1444 H - {dayWeek} {monthName} {yearNum}
-				</h3>
-				<p className="flex justify-center font-semibold text-xl">
-					<span className="inline-block px-3 py-1 mx-1 bg-yellow-800 rounded shadow-md mt-3">
+				</a>
+				<p className="flex flex-wrap justify-center font-semibold text-sm md:text-lg text-amber-800">
+					<span className="inline-block px-3 py-1 mx-1 bg-yellow-200 rounded-md shadow-md mt-3">
 						{timeRemain.days}&nbsp;
 						<span className="text-sm">hari</span>
 					</span>
-					<span className="inline-block px-3 py-1 mx-1 bg-yellow-800 rounded shadow-md mt-3">
+					<span className="inline-block px-3 py-1 mx-1 bg-yellow-200 rounded-md shadow-md mt-3">
 						{timeRemain.hours}&nbsp;
 						<span className="text-sm">jam</span>
 					</span>
-					<span className="inline-block px-3 py-1 mx-1 bg-yellow-800 rounded shadow-md mt-3">
+					<span className="inline-block px-3 py-1 mx-1 bg-yellow-200 rounded-md shadow-md mt-3">
 						{timeRemain.minutes}&nbsp;
 						<span className="text-sm">menit</span>
 					</span>
-					<span className="inline-block px-3 py-1 mx-1 bg-yellow-800 rounded shadow-md mt-3">
+					<span className="inline-block px-3 py-1 mx-1 bg-yellow-200 rounded-md shadow-md mt-3">
 						{timeRemain.seconds}&nbsp;
 						<span className="text-sm">detik</span>
 					</span>
 				</p>
-			</div>
-		</div>
+            </div>
+        </div>
 	);
 }
 

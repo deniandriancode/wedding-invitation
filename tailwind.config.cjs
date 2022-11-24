@@ -4,6 +4,9 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
 ],
   theme: {
+    //fontFamily: {
+      //'serif': ['"amiri_quran"'],
+    //},
     container: {
 	  center: true
 	},
