@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 import { encrypt, decrypt } from "./utils/cryptography.js";
 import { getQueryString } from "./utils/urlquery.js";
-import "./utils/userinteraction.js";
 
 import { MdHome } from "react-icons/md";
 import { AiFillHeart } from "react-icons/ai";
