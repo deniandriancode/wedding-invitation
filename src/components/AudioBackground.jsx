@@ -15,7 +15,7 @@ function AudioBackground() {
     }, []);
     return (
         <audio id="backsound" autoPlay loop controls className="fixed w-0 h-0">
-            <source src="/src/assets/qaf.m4a" type="audio/mpeg"></source>
+            <source src="/assets/qaf.m4a" type="audio/mpeg"></source>
         </audio>
     );
 }
