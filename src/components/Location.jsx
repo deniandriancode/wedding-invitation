@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 function Location(props) {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+    
 	return (
 		<div className="min-w-fit flex flex-col items-center text-yellow-100 -mt-16 relative z-index-0 min-h-screen h-fit px-2 bg-yellow-100 bg-[url('/src/assets/main-homepage-frame.png')] bg-center bg-cover bg-no-repeat">
 			<div className="animate__animated animate__fadeIn container bg-yellow-800 border-4 border-yellow-200/75 rounded-md px-2 md:px-3 py-8 max-w-4xl md:mx-auto h-max my-24 text-center relative z-index-1">

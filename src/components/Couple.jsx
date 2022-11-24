@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import 'animate.css';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 function Couple(props) {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
 	return (
 		<div className="min-w-fit flex flex-col box-border justify-center items-center -mt-10 relative z-index-0 h-max px-2 bg-yellow-100 bg-[url('/src/assets/main-homepage-frame.png')] bg-cover bg-center bg-no-repeat">
 			<div className="animate__animated animate__fadeIn container rounded-md flex flex-col gap-8 items-center box-border justify-center shadow-md border-4 border-yellow-700 max-w-xl md:mx-auto bg-amber-100 h-max py-24 my-24 text-center relative z-index-1 px-2 md:px-8">

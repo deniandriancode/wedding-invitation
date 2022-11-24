@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import commentListData from "/src/assets/guest.json";
 
 import { FaPaperPlane } from "react-icons/fa";
@@ -24,6 +24,7 @@ function CommentList(props) {
 }
 
 function Doa(props) {
+
     //const commentList = commentListData;
     const [doa, setDoa] = useState("");
     const [commentList, setCommentList] = useState([]);
@@ -42,6 +43,10 @@ function Doa(props) {
             date: "21 September 2022 08:13 AM"
         }]);
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
 
 	return (
 		<div className="min-w-fit flex flex-col items-center text-yellow-100 -mt-16 relative z-index-0 min-h-screen h-fit px-2 bg-yellow-100 bg-[url('/src/assets/main-homepage-frame.png')] bg-center bg-cover bg-no-repeat">
