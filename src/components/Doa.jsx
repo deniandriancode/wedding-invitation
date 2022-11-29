@@ -1,31 +1,33 @@
 import { useState, useEffect } from "react";
-import commentListData from "/src/assets/guest.json";
+import axios from "axios";
 
 import { FaPaperPlane } from "react-icons/fa";
 
 function CommentList(props) {
-    const commentList = props.comments;
-    const commentElement = commentList.map((item, index) => {
-        return (
-            <li className="my-2 bg-amber-900 text-amber-100 p-2 rounded-md">
-                <p>
-                    <span className="mr-3 bg-amber-700 px-3 py-1 rounded-full">{item.username}</span>
-                    <span className="text-xs border-b">{item.date}</span>
-                </p>
-                <p className="py-2 amiri_quran">{item.content}</p>
-            </li>
-        );
-    }).reverse();
+    const commentList = JSON.parse(props.comments);
+    let commentElement = [];
+    if (commentList.length > 0) {
+        commentElement = commentList.map((item, index) => {
+            return (
+                <li className="my-2 bg-amber-900 text-amber-100 p-2 rounded-md">
+                    <p>
+                        <span className="mr-3 bg-amber-700 px-3 py-1 rounded-full">{item.username}</span>
+                        <span className="text-xs border-b">{item.date}</span>
+                    </p>
+                    <p className="py-2 amiri_quran">{item.content}</p>
+                </li>
+            );
+        }).reverse();
+    } 
     return (
         <ul className="bg-amber-200 px-2 py-1 my-10 text-start rounded-md">
-            {commentElement}
+            { commentElement }
         </ul>
     );
 }
 
 function Doa(props) {
 
-    //const commentList = commentListData;
     const [doa, setDoa] = useState("");
     const [commentList, setCommentList] = useState([]);
 
@@ -36,16 +38,25 @@ function Doa(props) {
     function handleSubmit(event) {
         event.preventDefault();
         const newDoa = doa;
+        const response = axios.post("http://localhost:5000/pray", {
+            username: "deniandriancode",
+            content: newDoa
+        });
+        setTimeout(() => {
+            axios.get("http://localhost:5000/")
+                .then(result => {
+                    setCommentList(result.data);
+                });
+        }, 1000);
         setDoa("");
-        setCommentList([...commentList, {
-            username: "Default",
-            content: newDoa,
-            date: "21 September 2022 08:13 AM"
-        }]);
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+        axios.get("http://localhost:5000/")
+            .then(result => {
+                setCommentList(result.data);
+            });
     }, []);
 
 	return (
@@ -67,7 +78,7 @@ function Doa(props) {
                         </button>
                     </div>
                   </form>
-                  {commentList.length > 0 && <CommentList comments={commentList}/>}
+                {commentList.length > 0 && <CommentList comments={commentList}/> }
 			</div>
 		</div>
 	);
