@@ -11,8 +11,8 @@ function WeddingEvent(props) {
     }, []);
 
 	return (
-		<div className="min-w-fit flex flex-col items-center -mt-16 relative z-index-0 min-h-screen h-fit px-2 bg-yellow-100 bg-[url('/assets/main-homepage-frame.png')] bg-[url()] bg-center bg-cover bg-no-repeat">
-			<div className="animate__animated animate__fadeIn text-white px-2 md:px-12 py-12 container bg-yellow-900 rounded-md max-w-4xl md:mx-auto h-fit my-24 text-center relative z-index-1">
+		<div className="min-w-fit flex flex-col items-center -mt-16 relative z-index-0 min-h-screen h-fit px-2 bg-yellow-100  bg-[url('/assets/7.png')] bg-center bg-no-repeat bg-cover">
+			<div className="animate__animated animate__fadeIn text-white px-2 md:px-12 py-12 container bg-yellow-900 bg-[url('/assets/3.png')] bg-center bg-no-repeat bg-cover rounded-md max-w-4xl md:mx-auto h-fit my-24 text-center relative z-index-1">
 				<h1 className="font-bold text-3xl md:text-4xl mt-5 mb-14 text-yellow-200">SUSUNAN ACARA</h1>
 				<div className="container flex flex-wrap items-stretch gap-3 md:flex-nowrap max-w-4xl md:mx-auto box-border px-2 h-fit mb-12 text-center relative z-index-1">
 					<div className="w-full bg-amber-200 py-5 text-amber-800 rounded-md px-2">
@@ -31,7 +31,7 @@ function WeddingEvent(props) {
 				</div>
 			</div>
 
-			<div className="animate__animated animate__fadeIn container flex flex-col flex-wrap justify-center gap-5 text-amber-900 rounded-md py-3 border-2 border-yellow-800 md:flex-nowrap max-w-4xl mx-2 md:mx-auto bg-amber-200 h-fit mb-24 text-center relative z-index-1">
+			<div className="animate__animated animate__fadeIn container flex flex-col flex-wrap justify-center gap-5 text-amber-900 rounded-md py-3 border-2 border-yellow-800 md:flex-nowrap max-w-4xl mx-2 md:mx-auto bg-amber-200 h-fit mb-24 text-center relative z-index-1 bg-[url('/assets/main-homepage-frame.png')] bg-center bg-no-repeat bg-cover">
 				<h1 className="font-bold text-3xl md:text-4xl mt-5 mb-4">TURUT MENGUNDANG</h1>
 				<div className="flex flex-wrap justify-center text-left mx-auto gap-12 md:flex-nowrap w-fit h-auto py-5">
 					<ul className="bg-amber-800 text-yellow-100 shadow-md mx-2 px-6 md:pr-20 md:pl-10 w-full md:w-fit rounded-md py-4">
