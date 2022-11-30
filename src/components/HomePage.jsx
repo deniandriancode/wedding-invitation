@@ -46,7 +46,7 @@ function HomePage(props) {
 	
 	return (
 		<div className="min-w-fit text-yellow-200 flex items-center -mt-10 relative z-index-0 min-h-screen px-4 bg-yellow-100 bg-[url('/assets/main-homepage-frame.png')] bg-[url()] bg-cover bg-center bg-no-repeat">
-			<div className="animate__animated animate__fadeIn container flex flex-col gap-5 items-center bg-yellow-900 bg-[url('/assets/circle-frame.png')] bg-center bg-no-repeat bg-cover rounded-md px-5 py-24 max-w-4xl md:mx-auto h-max my-24 text-center relative z-index-1">
+			<div className="animate__animated animate__fadeIn container flex flex-col gap-5 items-center bg-yellow-900 bg-[url('')] bg-[url('')] bg-center bg-no-repeat bg-cover rounded-md px-5 py-24 max-w-4xl md:mx-auto h-max my-24 text-center relative z-index-1">
 				<h1 className="text-5xl md:text-7xl my-22 rounded-md px-2 md:px-10 font-[yaquote] drop-shadow-md">Wahyu Supriatna S. Sos.<br/>&<br/>Tiara Septian Mubarakah</h1>
 				<a href="https://calendar.google.com/calendar/u/0/r/week/2023/2/18?pli=1" target="_blank" title="Click to open calendar" className="px-5 py-3 rounded-full shadow-md bg-yellow-200 text-amber-800 text-sm md:text-xl font-semibold hover:underline">
                     6 Jumadal Awwal  1444 H - {dayWeek} {monthName} {yearNum}
