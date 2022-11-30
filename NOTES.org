@@ -25,6 +25,7 @@
 * TODO Create script to generate json file of guests' data
 * TODO Create GMail account for email subscription
 	+ write (python) script to communicate with gmail api to send email to guest who subscribe
+* TODO map placeholder
 
 -- bca : 3790620924
 -- mandiri : 1310013515251

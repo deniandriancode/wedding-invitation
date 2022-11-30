@@ -15,7 +15,7 @@ function AudioBackground() {
     }, []);
     return (
         <audio id="backsound" autoPlay loop controls className="fixed w-0 h-0">
-            <source src="/assets/qaf.m4a" type="audio/mpeg"></source>
+            <source src="/assets/Salim_Bahanan_Qaf_Nature_Rain.mp3" type="audio/mpeg"></source>
         </audio>
     );
 }

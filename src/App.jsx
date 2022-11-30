@@ -98,7 +98,7 @@ function App() {
 
 	return (
 		<div className="font-serif">
-            {/* <AudioBackground /> */} {/* move to bottom menu, autoplay is not suitable */}
+            <AudioBackground /> {/* move to bottom menu, autoplay is not suitable */}
             {!invitationOpen && <MainHomePage onOpenInvitation={handleOpenInvitation} />}
             {invitationOpen && 
                 <>
