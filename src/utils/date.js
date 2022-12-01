@@ -1,5 +1,3 @@
-"use strict";
-
 function getTwoDigit(num) {
 	if (num > 9) {
 		return new String(num);

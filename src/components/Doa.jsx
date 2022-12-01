@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { getTwoDigit, getTimeRemaining } from "../utils/date";
+import { decrypt } from "../utils/cryptography";
 
 import { FaPaperPlane } from "react-icons/fa";
 
@@ -11,16 +13,16 @@ function CommentList(props) {
             return (
                 <li className="my-2 bg-amber-900 text-amber-100 p-2 rounded-md">
                     <p>
-                        <span className="mr-3 bg-amber-700 px-3 py-1 rounded-full">{item.username}</span>
+                        <span className="mr-3 bg-amber-700 px-3 py-1 rounded">{item.username}</span>
                         <span className="text-xs border-b">{item.date}</span>
                     </p>
-                    <p className="py-2 amiri_quran">{item.content}</p>
+                    <p className="py-2 font-['Alegreya'] font-['Amiri']">{item.content}</p>
                 </li>
             );
         }).reverse();
     } 
     return (
-        <ul className="bg-amber-200 px-2 py-1 my-10 text-start rounded-md">
+        <ul className="bg-amber-200 px-2 py-[1px] my-10 text-start rounded-md">
             { commentElement }
         </ul>
     );
@@ -37,18 +39,42 @@ function Doa(props) {
 
     function handleSubmit(event) {
         event.preventDefault();
+
+        const salt = "paraphrase";
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+          get: (searchParams, prop) => searchParams.get(prop),
+        });
+        const guestName = params.guest; 
+        const decGuestName = decrypt(salt, guestName).replaceAll("_", " ");
+
+        const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+
+        const eventDate = new Date();
+
+        const dayDate = eventDate.getDate();
+        const monthName = monthNames[eventDate.getMonth()];
+        const yearNum = eventDate.getFullYear();
+        const hourTime = getTwoDigit(eventDate.getHours());
+        const minuteTime = getTwoDigit(eventDate.getMinutes());
+        
+        const currentDate = `${dayDate} ${monthName} ${yearNum}, ${hourTime}:${minuteTime}`;
+
         const newDoa = doa;
         const response = axios.post("http://localhost:5000/pray", {
-            username: "deniandriancode",
+            username: decGuestName,
+            date: currentDate,
             content: newDoa
         });
+
+        setDoa("");
         setTimeout(() => {
             axios.get("http://localhost:5000/")
                 .then(result => {
                     setCommentList(result.data);
                 });
-        }, 1000);
-        setDoa("");
+        }, 3000);
     }
 
     useEffect(() => {
@@ -66,7 +92,7 @@ function Doa(props) {
                 <p className="italic mb-5">Katakan sesuatu yang baik untuk kami</p>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group mb-3">
-                        <textarea value={doa} onChange={handleChange} spellCheck={false} id="message" rows="10" className="block p-2.5 w-full text-sm rounded-lg transition ease-in-out bg-[#613a12] border-1 border-[#ffffff] placeholder-gray-300 text-white focus:ring-yellow-100 focus:border-yellow-200" placeholder="Tuliskan pesan Anda di sini" required></textarea>
+                        <textarea value={doa} onChange={handleChange} spellCheck={false} id="message" rows="10" className="block p-2.5 w-full rounded-lg transition ease-in-out bg-[#613a12] border-1 border-[#ffffff] placeholder-gray-300 text-white focus:ring-yellow-100 focus:border-yellow-200" placeholder="Tuliskan pesan Anda di sini" required></textarea>
                     </div>
                     <div className="flex justify-start">
                         <button 
