@@ -45,7 +45,7 @@ function Doa(props) {
           get: (searchParams, prop) => searchParams.get(prop),
         });
         const guestName = params.guest; 
-        const decGuestName = decrypt(salt, guestName).replaceAll("_", " ");
+        const decGuestName = decrypt(salt, guestName).replaceAll("_", " ").replace(" S. Sos.", "");
 
         const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni",
             "Juli", "Agustus", "September", "Oktober", "November", "Desember"
@@ -62,7 +62,7 @@ function Doa(props) {
         const currentDate = `${dayDate} ${monthName} ${yearNum}, ${hourTime}:${minuteTime}`;
 
         const newDoa = doa;
-        const response = axios.post("http://localhost:5000/pray", {
+        const response = axios.post("https://sage-assorted-maiasaura.glitch.me/pray", {
             username: decGuestName,
             date: currentDate,
             content: newDoa
@@ -70,7 +70,7 @@ function Doa(props) {
 
         setDoa("");
         setTimeout(() => {
-            axios.get("http://localhost:5000/")
+            axios.get("https://sage-assorted-maiasaura.glitch.me/")
                 .then(result => {
                     setCommentList(result.data);
                 });
@@ -79,7 +79,7 @@ function Doa(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        axios.get("http://localhost:5000/")
+        axios.get("https://sage-assorted-maiasaura.glitch.me/")
             .then(result => {
                 setCommentList(result.data);
             });

@@ -12,7 +12,7 @@ function MainHomePage(props) {
     });
     const guestName = params.guest;
     /* BEGIN PREP */
-    const testName = "Wahyu_Supriatna_S._Sos.";
+    const testName = "Tiara_Septian_Mubarakah";
     const enc = encrypt(salt, testName);
     console.log(enc);
     /* END PREP */
