@@ -15,7 +15,7 @@ function WeddingEvent(props) {
 			<div className="animate__animated animate__fadeIn text-white px-2 md:px-12 py-12 container bg-yellow-900 bg-[url('/assets/3.png')] bg-center bg-no-repeat bg-cover rounded-md max-w-4xl md:mx-auto h-fit my-24 text-center relative z-index-1">
 				<h1 className="font-bold text-3xl md:text-4xl mt-5 mb-14 text-yellow-200">SUSUNAN ACARA</h1>
 				<div className="container flex flex-wrap items-stretch gap-3 md:flex-nowrap max-w-4xl md:mx-auto box-border px-2 h-fit mb-12 text-center relative z-index-1">
-					<div className="w-full bg-amber-200 py-5 text-amber-800 rounded-md px-2">
+					<div className="w-full bg-amber-200 py-5 text-sm md:text-base text-amber-800 rounded-md px-2">
 						<h1 data-tooltip="Akad nikah, ini yang paling penting, resepsi mah bisa kapan-kapan" className="text-2xl font-bold">AKAD NIKAH</h1>
 						<FaHandshake className="mx-auto text-5xl my-3"/>
 						<p className="my-3 underline text-amber-900 font-bold">6 Jumadal Awwal  1444 H - 18 Februari 2023</p>

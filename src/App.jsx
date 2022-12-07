@@ -97,7 +97,7 @@ function App() {
     }
 
 	return (
-		<div className="font-['Alegreya']">
+		<div className="font-['dc']">
             <AudioBackground /> 
             {!invitationOpen && <MainHomePage onOpenInvitation={handleOpenInvitation} />}
             {invitationOpen && 

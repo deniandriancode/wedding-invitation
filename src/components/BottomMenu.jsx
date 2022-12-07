@@ -23,7 +23,7 @@ function BottomMenu(props) {
 	
 	return (
 		<div className="border-t bg-amber-900 border-amber-900 fixed bottom-0 left-0 right-0 overflow-x-auto z-index-5">
-			<ul className="flex mx-2 justify-center min-w-fit text-sm font-medium text-center text-amber-200">
+			<ul className="flex mx-2 justify-center min-w-fit font-medium text-center text-amber-200">
 				{tabList}
 			</ul>
 		</div>
