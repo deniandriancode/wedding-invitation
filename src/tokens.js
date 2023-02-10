@@ -42,7 +42,7 @@ function decrypt(salt, message) {
     return decryptedMessage;
 }
 
-const salt = "yuyuyaya";
+const salt = "cdef";
 const names = ["Admin", "Wahyu_Supriatna", "Tiara_Septia_Mubarokah"];
 
 for (const name of names) {
