@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import HeaderElement from './HeaderElement';
 import { getTimeRemaining, getTwoDigit } from "../utils/date";
 import { rootClass, containerClass } from "../utils/commonStyle";
 
-function Home(): React.FC {
+function Home() {
     const mainTitleClass = 'text-3xl md:text-4xl lg:text-6xl font-["Great_Vibes"]';
     const timeDigitClass = 'px-2 py-1 text-gray-600';
     const timeDigitNumClass = 'text-gray-700 font-bold text-2xl underline';

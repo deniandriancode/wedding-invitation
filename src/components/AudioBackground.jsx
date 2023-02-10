@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
-function AudioBackground(): React.FC {
+function AudioBackground() {
     useEffect(() => {
         const activityEvents = [
             'mousedown', 'mousemove', 'keydown',

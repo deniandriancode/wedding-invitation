@@ -1,4 +1,4 @@
-function getPRNG(seed: string): number {
+function getPRNG(seed) {
     let seedValue = []
     for (let i in seed) {
         seedValue.push(seed.charCodeAt(i));
@@ -8,7 +8,7 @@ function getPRNG(seed: string): number {
     return parseInt(randomValue);
 }
 
-function encrypt(salt: string, message: string): string {
+function encrypt(salt, message) {
     let index = parseInt(message.length / 2);
     let msg = message.slice(0, index) + salt + message.slice(index);
     let shift = getPRNG(salt);
@@ -22,7 +22,7 @@ function encrypt(salt: string, message: string): string {
     return encryptedMessage;
 }
 
-function decrypt(salt: string, message: string): string {
+function decrypt(salt, message) {
     let encSalt = []
     let shift = getPRNG(salt);
 

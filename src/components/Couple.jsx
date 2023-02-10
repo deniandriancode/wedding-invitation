@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import HeaderElement from './HeaderElement';
 import { rootClass, containerClass } from '../utils/commonStyle';
 
-function Couple(): React.FC {
+function Couple() {
     const mainTitleClass = 'font-bold font-["Great_Vibes"] text-xl sm:text-3xl mb-16';
     const parClass = 'my-4 max-w-[576px] w-[90%] mx-auto';
     const coupleClass = 'text-gray-700 rounded bg-purple-200 shadow py-4 px-2';

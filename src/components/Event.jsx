@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import { FaHandshake } from "react-icons/fa";
 import { GiRose } from "react-icons/gi";
@@ -6,7 +6,7 @@ import { GiRose } from "react-icons/gi";
 import HeaderElement from './HeaderElement';
 import { rootClass, containerClass } from '../utils/commonStyle';
 
-function Event(): React.FC {
+function Event() {
     const mainTitleClass = 'font-bold font-["Great_Vibes"] text-xl sm:text-3xl mb-16';
 
     useEffect(() => {

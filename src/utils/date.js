@@ -1,4 +1,4 @@
-function getTwoDigit(num: number): string {
+function getTwoDigit(num) {
     if (num > 9) {
         return new String(num);
     }
@@ -6,7 +6,7 @@ function getTwoDigit(num: number): string {
 }
 
 
-function getTimeRemaining(deadline: string): TimeRemainingType {
+function getTimeRemaining(deadline) {
     const total = Date.parse(deadline) - Date.parse(new Date());
     const seconds = Math.floor( (total/1000) % 60 );
     const minutes = Math.floor( (total/1000/60) % 60 );

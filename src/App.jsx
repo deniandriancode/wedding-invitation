@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import uniqid from 'uniqid';
 
 import { MdHome } from "react-icons/md";
@@ -21,35 +21,35 @@ import Gift from './components/Gift';
 import { getQueryString } from './utils/urlquery';
 import { encrypt, decrypt } from './utils/cryptography';
 
-const initTabs: TabType[] = [
+const initTabs = [
     {
         name: "Home",
-        icon: [<MdHome key={uniqid()} />],
+        icons: [<MdHome key={uniqid()} />],
         active: true
     },
     {
         name: "Couple",
-        icon: [<AiFillHeart key={uniqid()} />],
+        icons: [<AiFillHeart key={uniqid()} />],
         active: false
     },
     {
         name: "Event",
-        icon: [<BsCalendar2DayFill key={uniqid()} />],
+        icons: [<BsCalendar2DayFill key={uniqid()} />],
         active: false
     },
     {
         name: "Location",
-        icon: [<FaMapMarkerAlt key={uniqid()} />],
+        icons: [<FaMapMarkerAlt key={uniqid()} />],
         active: false
     },
     {
         name: "Doa",
-        icon: [<IoHandRight key={uniqid()} />, <IoHandLeft key={uniqid()} />],
+        icons: [<IoHandRight key={uniqid()} />, <IoHandLeft key={uniqid()} />],
         active: false
     },
     {
         name: "Gift",
-        icon: [<BsFillGiftFill key={uniqid()} />],
+        icons: [<BsFillGiftFill key={uniqid()} />],
         active: false
     },
 ];
@@ -73,11 +73,11 @@ function App() {
   const [tabs, setTabs] = useState(initTabs);
 
 
-  function handleOpenInvite(): void {
+  function handleOpenInvite() {
     setOpenInvite(true);
   }
 
-  function handleSetTab(event: SyntheticBaseEvent): void {
+  function handleSetTab(event) {
       let target = event.target;
       while (target.tagName !== "BUTTON") {
           target = target.parentElement;

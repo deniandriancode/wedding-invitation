@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import uniqid from 'uniqid';
 import axios from 'axios';
@@ -10,10 +10,7 @@ import { rootClass, containerClass } from '../utils/commonStyle';
 
 const loadingIconStroke = 'rgb(147 51 234)';
 
-interface Props {
-    messageList: GuestMessage[];
-}
-function MessageElem({ messageList }): React.FC<Props> {
+function MessageElem({ messageList }) {
     if (!messageList) {
         return (<></>);
     }
@@ -29,16 +26,13 @@ function MessageElem({ messageList }): React.FC<Props> {
     return rendered.reverse();
 }
 
-interface Props {
-    username: string;
-}
-function Doa({ username }): React.FC<Props> {
+function Doa({ username }) {
     const mainTitleClass = 'font-bold font-["Great_Vibes"] text-xl sm:text-3xl mb-16';
 
     const [messageList, setMessageList] = useState([]);
     const [message, setMessage] = useState('');
 
-    function handleSubmit(event: SyntheticBaseEvent): void {
+    function handleSubmit(event) {
         event.preventDefault();
         if (message.trim().length === 0)
             return;
@@ -63,7 +57,7 @@ function Doa({ username }): React.FC<Props> {
             });
     }
 
-    function handleChange(event: SyntheticBaseEvent): void {
+    function handleChange(event) {
         setMessage(event.target.value);
     }
 

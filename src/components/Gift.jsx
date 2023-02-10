@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import LoadingIcons from 'react-loading-icons'
 
@@ -7,7 +7,7 @@ import { rootClass, containerClass } from '../utils/commonStyle';
 
 const loadingIconStroke = 'rgb(147 51 234)';
 
-function Gift(): React.FC {
+function Gift() {
     const mainTitleClass = 'font-bold font-["Great_Vibes"] text-3xl mb-16';
 
     useEffect(() => {
