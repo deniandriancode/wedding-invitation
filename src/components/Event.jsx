@@ -41,18 +41,17 @@ function Event() {
                 <div className='text-sm grid md:grid-cols-2 md:justify-center md:items-center gap-8 md:gap-2 lg:px-8'>
                     <div className='text-center bg-purple-100 px-4 py-8 shadow rounded'>
                         <ul className='md:leading-7'>
-                            <li>Abdul Gafur Lc. Ma.</li>
-                            <li>Abu Milya As Sundawi</li>
-                            <li>Abu Detiara Al Gharibi</li>
-                            <li>Abdul Gafur Lc. Ma.</li>
-                            <li>Abu Milya As Sundawi</li>
-                            <li>Abu Detiara Al Gharibi</li>
-                            <li>Abdul Gafur Lc. Ma.</li>
-                            <li>Abu Milya As Sundawi</li>
-                            <li>Abu Detiara Al Gharibi</li>
-                            <li>Abdul Gafur Lc. Ma.</li>
-                            <li>Abu Milya As Sundawi</li>
-                            <li>Abu Detiara Al Gharibi</li>
+                            <li>Kel. Besar Bpk. Jana (Alm)/Ibu Kanah(Alm)</li>
+                            <li>Kel. Besar Bpk. Aman (Alm)/Ibu Komasih</li>
+                            <li>Aki Endut/Ma Hj Euceu</li>
+                            <li>Jang Rodi/Eneng Susi</li>
+                            <li>Ma Ameh</li>
+                            <li>Bpk. Asep Obes/Ibu Rosita (Alm)</li>
+                            <li>Bpk. Dadang/Ibu Dede</li>
+                            <li>Bpk. Ojim Son/Ibu Eka</li>
+                            <li>Mas Imam/Ibu Eneng</li>
+                            <li>A Willy/Teh Ami</li>
+                            <li>Bpk. Jana Breng (Bangke)/Ibu Eneng Ratih</li>
                         </ul>
                     </div>
                     <div className='text-center bg-purple-100 px-4 py-8 shadow rounded'>
