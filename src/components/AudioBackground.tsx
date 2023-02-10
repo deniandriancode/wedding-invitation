@@ -1,0 +1,23 @@
+import React, { useEffect } from "react";
+
+function AudioBackground(): React.FC {
+    useEffect(() => {
+        const activityEvents = [
+            'mousedown', 'mousemove', 'keydown',
+            'scroll', 'touchstart'
+        ];
+
+        for (let i in activityEvents) {
+            document.addEventListener(activityEvents[i], () => {
+                document.querySelector("#backsound").play();
+            });
+        }
+    }, []);
+    return (
+        <audio id="backsound" autoPlay loop controls className="fixed w-0 h-0">
+            <source src="/audio/quran.mp3" type="audio/mpeg"></source>
+        </audio>
+    );
+}
+
+export default AudioBackground;

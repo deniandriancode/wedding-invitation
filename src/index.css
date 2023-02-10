@@ -1,23 +1,87 @@
-@import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
-@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@font-face {
+    font-family: 'Butler';
+    src: url('/font/Butler.woff') format('woff'),
+         url('/font/Butler.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Sangkuriang';
+    src: url('/font/Sangkuriang.woff') format('woff'),
+         url('/font/Sangkuriang.woff2') format('woff2');
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'yaquote';
-    src: url('assets/yaquotescript_personaluse-webfont.woff2') format('woff2'),
-         url('assets/yaquotescript_personaluse-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+body {
+    font-family: 'Poppins', sans;
 }
 
-@font-face {
-    font-family: 'dc';
-    src: url('assets/DancingScript-Regular.woff2') format('woff2'),
-        url('assets/DancingScript-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+.user-border-l::before, .user-border-l::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    background-color: none;
+    z-index: 0;
+}
+
+.user-border-l::before {
+    top: 0;
+    left: 0;
+    border-left: 4px solid rgb(88 28 135);
+    border-top: 4px solid rgb(88 28 135);
+}
+
+.user-border-l::after {
+    bottom: 0;
+    right: 0;
+    border-right: 4px solid rgb(88 28 135);
+    border-bottom: 4px solid rgb(88 28 135);
+}
+
+.user-shadow-open-btn {
+    box-shadow: 8px 10px 5px -5px #222222;
+}
+
+.text-shadow {
+    text-shadow: 5px 5px 5px #222;
+}
+
+.text-shadow-sm {
+    text-shadow: 3px 3px 4px #777;
+}
+
+.shadow-custom {
+    box-shadow: 0px 9px 8px 1px #777;
+}
+
+@media screen and (min-width: 576px) {
+    /* width */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background-color: rgba(233, 213, 255, .5);
+    }
+    
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: .15rem;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
 }
