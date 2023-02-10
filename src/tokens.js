@@ -42,7 +42,10 @@ function decrypt(salt, message) {
     return decryptedMessage;
 }
 
-const salt = "A8234bns";
-const name = "Tatang_Beureum";
+const salt = "yuyuyaya";
+const names = ["Admin", "Wahyu_Supriatna", "Tiara_Septia_Mubarokah"];
 
-console.log(encrypt(salt, name));
+for (const name of names) {
+    console.log(encrypt(salt, name));
+}
+
