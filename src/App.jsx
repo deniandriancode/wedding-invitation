@@ -55,7 +55,7 @@ const initTabs = [
 ];
 
 function App() {
-  const salt = "cdef";
+  const salt = "aaaa";
   const encGuestName = getQueryString("guest");
   const decGuestName = decrypt(salt, encGuestName).replaceAll("_", " ");
 
