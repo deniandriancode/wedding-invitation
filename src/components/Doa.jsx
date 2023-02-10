@@ -37,7 +37,7 @@ function Doa({ username }) {
         if (message.trim().length === 0)
             return;
 
-        const url = 'http://localhost:4000/message';
+        const url = 'https://peridot-eminent-seatbelt.glitch.me/message';
         const reqData = {
             username,
             message,
@@ -52,7 +52,7 @@ function Doa({ username }) {
         });
         setMessageList([...messageList, reqData]);
 
-        axios.get('http://localhost:4000')
+        axios.get('https://peridot-eminent-seatbelt.glitch.me/')
             .then((res) => {
             });
     }
@@ -63,7 +63,7 @@ function Doa({ username }) {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        const url = 'http://localhost:4000';
+        const url = 'https://peridot-eminent-seatbelt.glitch.me/';
         axios.get(url)
             .then((res) => {
                 setMessageList(res.data);
@@ -90,7 +90,7 @@ function Doa({ username }) {
                     <div className='absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]'>
                         <LoadingIcons.Oval stroke={loadingIconStroke} />
                     </div>
-                    <ul className='relative bg-gray-50 p-1 overflow-y-auto max-h-[400px] rounded z-10'>
+                    <ul className='relative min-h-[50px] bg-gray-50 p-1 overflow-y-auto max-h-[400px] rounded z-10'>
                         <MessageElem messageList={messageList} />
                     </ul>
                 </div>
