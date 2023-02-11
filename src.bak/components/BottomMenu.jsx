@@ -9,11 +9,9 @@ const tabActiveBorderColor = "border-[#fedada]";
 const tabActiveTextColor = "text-[#fedada]";
 
 
-export default function BottomMenu(props) {
+function BottomMenu({ tabs, handleSetTab }) {
     const normalTabClass = `flex flex-col justify-evenly items-center py-1 pt-2 md:py-3 px-2 md:px-4 border-t-2 border-transparent ${tabTextHoverColor} ${tabBorderHoverColor} group outline-none ease-in-out duration-200`;
     const activeTabClass = `flex flex-col justify-evenly items-center py-1 pt-2 md:py-3 px-2 md:px-4 ${tabActiveTextColor} border-t-2 ${tabActiveBorderColor} active group outline-none ease-in-out duration-200`;
-    const tabs = props.tabs;
-    const handleSetTab = props.handleSetTab;
 
     const tabList = tabs.map((item, index) => {
         return (
@@ -37,3 +35,4 @@ export default function BottomMenu(props) {
     );
 }
 
+export default BottomMenu;

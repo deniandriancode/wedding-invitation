@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import HeaderElement from './HeaderElement';
 import { rootClass, containerClass } from '../utils/commonStyle';
 
-export default function Couple() {
+function Couple() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -47,3 +47,4 @@ export default function Couple() {
     );
 }
 
+export default Couple;

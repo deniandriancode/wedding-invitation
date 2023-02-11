@@ -7,10 +7,7 @@ import { rootClass, containerClass } from '../utils/commonStyle';
 
 const loadingIconStroke = 'rgb(147 51 234)';
 
-export default function Location() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    });
+function Location() {
     const mainTitleClass = 'font-bold font-["Great_Vibes"] text-shadow-sm text-3xl sm:text-3xl mb-16';
 
     return (
@@ -19,7 +16,7 @@ export default function Location() {
             <article className={containerClass}>
                 <h1 className={mainTitleClass}>Lokasi</h1>
                 <div className='mb-8 text-gray-600'>
-                    <p className='font-semibold font-["Butler"] underline underline-offset-4 mb-2 text-gray-800'>Kampung Gumuruh RT. 06/04</p>
+                    <p className='font-semibold underline underline-offset-4 mb-2 text-gray-800'>Kampung Gumuruh RT. 06/04</p>
                     <p className=''>Desa Nagrak</p>
                     <p className=''>Kecamatan Cangkuang</p>
                     <p className=''>Kabupaten Bandung</p>
@@ -49,4 +46,4 @@ export default function Location() {
     );
 }
 
-
+export default Location;

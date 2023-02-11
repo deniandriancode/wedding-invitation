@@ -6,11 +6,8 @@ import { GiRose } from "react-icons/gi";
 import HeaderElement from './HeaderElement';
 import { rootClass, containerClass } from '../utils/commonStyle';
 
-export default function Event() {
+function Event() {
     const mainTitleClass = 'font-bold font-["Great_Vibes"] text-shadow-sm text-3xl sm:text-3xl mb-16';
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [])
 
     return (
         <section className={rootClass + ' flex-col gap-8 pt-12 pb-24'}>
@@ -77,3 +74,4 @@ export default function Event() {
     );
 }
 
+export default Event;

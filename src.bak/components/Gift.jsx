@@ -8,9 +8,6 @@ import { rootClass, containerClass } from '../utils/commonStyle';
 const loadingIconStroke = 'rgb(147 51 234)';
 
 function Gift() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    });
     const mainTitleClass = 'font-bold font-["Great_Vibes"] text-shadow-sm text-3xl mb-16';
 
     return (
@@ -25,12 +22,11 @@ function Gift() {
                     <p className='mt-8'>Mempelai Wanita</p>
                     <img alt="QR Code Image" src="/img/qrcode-woman.png" className=' my-2 relative rounded shadow mx-auto z-10 border max-w-[300px] w-full' />
                 </div>
-                <p className='mb-5 max-w-[435px] mx-auto mt-14 font-bold md:text-lg'>Rekening: 3790620924 a/n Wahyu Supriatna</p>
-                <p className='mb-5 max-w-[435px] mx-auto font-bold md:text-lg'>Rekening: 1570401609 a/n Tiara Septia M</p>
+                <p className='mb-5 max-w-[435px] mx-auto mt-14 font-bold md:text-xl'>Rekening: 3790620924 a/n Wahyu Supriatna</p>
+                <p className='mb-5 max-w-[435px] mx-auto font-bold md:text-xl'>Rekening: 1570401609 a/n Tiara Septia M</p>
             </article>
         </section>
     );
 }
 
 export default Gift;
-

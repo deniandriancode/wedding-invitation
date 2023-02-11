@@ -29,13 +29,10 @@ function MessageElem({ messageList }) {
 }
 
 function Doa() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    });
     const mainTitleClass = 'font-bold font-["Great_Vibes"] text-shadow-sm text-xl sm:text-3xl mb-16';
       const salt = "aaaa";
       const encGuestName = getQueryString("guest");
-      const username = decrypt(salt, encGuestName).replaceAll("_", " ").replace("S. Sos.", "");
+      const username = decrypt(salt, encGuestName).replaceAll("_", " ");
 
     const [messageList, setMessageList] = useState([]);
     const [message, setMessage] = useState('');
@@ -89,7 +86,7 @@ function Doa() {
                 <p className='text-sm'>untuk obrolan lebih seru, <a href="https://yuyu-yaya.github.io" className='underline text-purple-500' target="_blank">klik di sini.</a></p>
 
                 <form onSubmit={handleSubmit} className='flex flex-col gap-2 my-8'>
-                    <textarea spellCheck={false} className='transition rounded text-sm md:text-base outline-none bg-purple-50 border-gray-400 focus:border-purple-300 resize-none shadow' value={message} onChange={handleChange} placeholder='Tulis pesan' rows='4' />
+                    <textarea spellCheck={false} className='transition rounded text-sm md:text-base bg-purple-50 border-gray-400 focus:border-purple-300 resize-none shadow' value={message} onChange={handleChange} placeholder='Tulis pesan' rows='4' />
                     <button className='flex justify-center items-center gap-1 transition text-white bg-purple-400 hover:bg-purple-500 py-1 px-6 rounded shadow md:w-fit'><IoIosSend /> Kirim</button>
                 </form>
 
