@@ -27,7 +27,7 @@ function MessageElem({ messageList }) {
 }
 
 function Doa({ username }) {
-    const mainTitleClass = 'font-bold font-["Great_Vibes"] text-xl sm:text-3xl mb-16';
+    const mainTitleClass = 'font-bold font-["Great_Vibes"] text-shadow-sm text-xl sm:text-3xl mb-16';
 
     const [messageList, setMessageList] = useState([]);
     const [message, setMessage] = useState('');

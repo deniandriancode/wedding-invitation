@@ -4,11 +4,11 @@ import HeaderElement from './HeaderElement';
 import { rootClass, containerClass } from '../utils/commonStyle';
 
 function Couple() {
-    const mainTitleClass = 'font-bold font-["Great_Vibes"] text-xl sm:text-3xl mb-16';
+    const mainTitleClass = 'font-bold font-["Great_Vibes"] text-shadow-sm text-3xl sm:text-3xl mb-16';
     const parClass = 'my-4 max-w-[576px] w-[90%] mx-auto';
     const coupleClass = 'text-gray-700 rounded bg-purple-200 shadow py-4 px-2';
     const coupleTitle = 'mt-8 font-semibold underline'
-    const coupleFullName = 'text-md my-4 text-gray-500';
+    const coupleFullName = 'text-md my-4 text-gray-500 font-["Butler"]';
     const pClass = 'text-sm';
 
     useEffect(() => {
@@ -28,18 +28,18 @@ function Couple() {
 
             <article className={containerClass}>
                 <h1 className={mainTitleClass}>Kedua Mempelai</h1>
-                    <p className='mb-8'>Tak kenal maka ta'aruf</p>
+                    <p className='mb-8'>Kami yang berbahagia</p>
                     <div className='grid grid-cols-1 items-center justify-center gap-2'>
                     <div className={coupleClass + ' pb-14'}>
                         <h3 className={coupleTitle}>Yuyu</h3>
                         <p className={coupleFullName}>Wahyu Supriatna S. Sos.</p>
                         <p className={pClass}>Putra Kedua dari</p>
-                        <p className={pClass}>Ajat Rasiman dan Sukaeni</p>
+                        <p className={pClass}>Ajat Rasiman & Sukaeni</p>
                         <img alt="Mempelai Pria" src="/img/swan-couple-edit.png" className={'mx-auto'}/>
                         <h3 className={coupleTitle}>Yaya</h3>
                         <p className={coupleFullName}>Tiara Septia Mubarokah</p>
                         <p className={pClass}>Putri Pertama dari</p>
-                        <p className={pClass}>Asep Rahmat dan Yati Suryati</p>
+                        <p className={pClass}>Asep Rahmat & Yati Suryati</p>
                     </div>
                 </div>
             </article>

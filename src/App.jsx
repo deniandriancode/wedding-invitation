@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import uniqid from 'uniqid';
 
 import { MdHome } from "react-icons/md";
@@ -77,7 +77,8 @@ function App() {
     setOpenInvite(true);
   }
 
-  function handleSetTab(event) {
+
+    function handleSetTab(event) {
       let target = event.target;
       while (target.tagName !== "BUTTON") {
           target = target.parentElement;
@@ -95,7 +96,7 @@ function App() {
               return {...item, active: false};
           });
       });
-  }
+    }
 
   return (
     <div className={`w-screen h-screen bg-white box-border text-gray-700 overflow-x-hidden text-sm md:text-base`}>
