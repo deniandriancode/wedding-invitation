@@ -39,7 +39,7 @@ export default function Location() {
                             marginWidth="0"
                             className='rounded shadow border-4 border-purple-900'
                             style={{position: "relative", zIndex: 2}}
-                            src="https://www.google.com/maps/embed/v1/place?q=Gumuruh,+Nagrak,+Bandung+Regency,+West+Java,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                            src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=-7.057867, 107.554761&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
                             <a href="https://www.maps.ie/distance-area-calculator.html">measure area map</a>
                         </iframe>
                     </div>
