@@ -70,7 +70,7 @@ const names = [
     "Ratma_Komalasari_S._Sos.",
     "Khoerunnisa_\"Ajeng\"_Nuraeni_S._Sos.",
     "Inayatu_Sholihah_S._Sos.",
-    "Junizar_Muhammad_Fahmi_S._Sos.",
+    "Junizar_Muhammad_Fahmi_S._AB.",
     "Sidiq_Rivansyah_S._Sos.",
     "Resty_Fauziyyah_S._Sos._M._Si.",
     "Irfan_Prima_W_S._Sos.",
