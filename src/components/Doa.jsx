@@ -20,7 +20,7 @@ function MessageElem({ messageList }) {
         return (
             <li className='bg-purple-200 p-2 mb-1 rounded text-start' key={uniqid()}>
                 <p className='text-[.80rem] text-gray-900'><span className='break-all inline-block px-2 rounded bg-purple-300'>{item.username}</span></p>
-                <p className='text-gray-800 mt-1'>{item.message}</p>
+                <p className='text-sm md:text-base text-gray-800 mt-1'>{item.message}</p>
             </li>
         );
     });
