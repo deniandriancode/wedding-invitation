@@ -31,7 +31,7 @@ function MessageElem({ messageList }) {
 function Doa() {
     useEffect(() => {
         window.scrollTo(0, 0);
-    });
+    }, []);
     const mainTitleClass = 'font-bold font-["Great_Vibes"] text-shadow-sm text-xl sm:text-3xl mb-16';
       const salt = "aaaa";
       const encGuestName = getQueryString("guest");
