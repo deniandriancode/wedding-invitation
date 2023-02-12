@@ -35,7 +35,7 @@ function Doa() {
     const mainTitleClass = 'font-bold font-["Great_Vibes"] text-shadow-sm text-xl sm:text-3xl mb-16';
       const salt = "aaaa";
       const encGuestName = getQueryString("guest");
-      const username = decrypt(salt, encGuestName).replaceAll("_", " ").replace("S. Sos.", "");
+      const username = decrypt(salt, encGuestName).replaceAll("_", " ").replace("S. Sos.", "").replace("M. Si.", "");
 
     const [messageList, setMessageList] = useState([]);
     const [message, setMessage] = useState('');
