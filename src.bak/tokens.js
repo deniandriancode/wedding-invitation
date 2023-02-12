@@ -43,9 +43,14 @@ function decrypt(salt, message) {
 }
 
 const salt = "aaaa";
-const names = ["Admin", "Wahyu_Supriatna", "Tiara_Septia_Mubarokah"];
+const names = [
+    "Admin",
+    "Wahyu_Supriatna",
+    "Tiara_Septia_Mubarokah",
+    "Tiara_More_&_Hendra",
+];
 
 for (const name of names) {
-    console.log(encrypt(salt, name));
+    console.log(`${name} : ${encrypt(salt, name)}`);
 }
 

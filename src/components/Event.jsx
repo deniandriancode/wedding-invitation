@@ -61,7 +61,7 @@ export default function Event() {
                         <ul className='md:leading-7'>
                             <li>Alm. Bpk. Ade Solih</li>
                             <li>Alm. Ayi Hamdani</li>
-                            <li>Ujang Wahyuding</li>
+                            <li>Ujang Wahyudin</li>
                             <li>Yusup Solihin</li>
                             <li>Moh. Taufan</li>
                             <li>Bpk. Endang</li>
