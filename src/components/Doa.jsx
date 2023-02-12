@@ -86,7 +86,7 @@ function Doa() {
             <article className={containerClass}>
                 <h1 className={mainTitleClass}>Doa & Ucapan Selamat</h1>
                 <p>Katakan sesuatu yang baik untuk kami😊</p>
-                <p className='text-sm'>untuk obrolan lebih seru, <a href="https://yuyu-yaya.github.io" className='underline text-purple-500' target="_blank">klik di sini.</a></p>
+                {/* <p className='text-sm'>untuk obrolan lebih seru, <a href="https://yuyu-yaya.github.io" className='underline text-purple-500' target="_blank">klik di sini.</a></p> */}
 
                 <form onSubmit={handleSubmit} className='flex flex-col gap-2 my-8'>
                     <textarea spellCheck={false} className='transition rounded text-sm md:text-base outline-none bg-purple-50 border-gray-400 focus:border-purple-300 resize-none shadow' value={message} onChange={handleChange} placeholder='Tulis pesan' rows='4' />
