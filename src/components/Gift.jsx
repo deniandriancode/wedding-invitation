@@ -17,7 +17,7 @@ function Gift() {
         <section className={rootClass + ' flex-col gap-8 pt-12 pb-24'}>
             <HeaderElement />
             <article className={containerClass}>
-                <h1 className={mainTitleClass}>Dana Tambahan</h1>
+                <h1 className={mainTitleClass}>Hadiah</h1>
                 <p className='mb-5 max-w-[435px] mx-auto'>Bagi yang berhalangan hadir, tapi ingin memberi hadiah kepada pengantin baru, silahkan scan saja <i>QR code</i> di bawah ini.</p>
                 <div className='relative min-h-[200px]'>
                     <p>Mempelai Pria</p>
