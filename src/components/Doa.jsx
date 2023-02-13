@@ -19,7 +19,7 @@ function MessageElem({ messageList }) {
     const rendered = messageList.map((item, index) => {
         return (
             <li className='bg-purple-200 p-2 mb-1 rounded text-start' key={uniqid()}>
-                <p className='text-[.80rem] text-gray-900'><span className='break-all inline-block px-2 rounded bg-purple-300'>{item.username}</span></p>
+                <p className='text-[.80rem] text-gray-900'><span className='break-all inline-block px-2 rounded bg-purple-300'>{item.username.replace("S. Sos.", "").replace("M. Si.", "").replace("S. AB.", "")}</span></p>
                 <p className='text-sm md:text-base text-gray-800 mt-1'>{item.message}</p>
             </li>
         );
@@ -35,7 +35,7 @@ function Doa() {
     const mainTitleClass = 'font-bold font-["Great_Vibes"] text-shadow-sm text-xl sm:text-3xl mb-16';
       const salt = "aaaa";
       const encGuestName = getQueryString("guest");
-      const username = decrypt(salt, encGuestName).replaceAll("_", " ").replace("S. Sos.", "").replace("M. Si.", "");
+      const username = decrypt(salt, encGuestName).replaceAll("_", " ").replace("S. Sos.", "").replace("M. Si.", "").replace("S. AB.", "");
 
     const [messageList, setMessageList] = useState([]);
     const [message, setMessage] = useState('');
