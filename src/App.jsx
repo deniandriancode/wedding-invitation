@@ -99,6 +99,7 @@ export default function App() {
   return (
     <div>
     <AudioBackground />
+      <a href="https://freepik.com" className='none'></a>
     { !openInvite ? <FrontPage decGuestName={decGuestName} handleOpenInvite={handleOpenInvite} /> : 
       <>
         { page }
