@@ -12,7 +12,7 @@ function Home() {
   const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni",
       "Juli", "Agustus", "September", "Oktober", "November", "Desember"
   ];
-  const eventDateString = "2023-02-18 09:00";
+  const eventDateString = "2023-02-18 08:00";
   const eventDate = new Date(eventDateString);
 
   const dayWeek = eventDate.getDate();
@@ -33,6 +33,8 @@ function Home() {
       minutes,
       seconds
   });
+  const [wedDay, setWedDay] = useState(false);
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -42,6 +44,9 @@ function Home() {
        const hours_l = remaining_l.hours;
        const minutes_l = remaining_l.minutes;
        const seconds_l = remaining_l.seconds;
+        if (seconds_l < 0) {
+          setWedDay(true);
+        }
        setTimeRemain({
          days: days_l,
          hours: hours_l,
@@ -64,6 +69,8 @@ function Home() {
           <img className={'max-w-[260px] w-[80%] mx-auto'} src="/img/date-header.png" alt="date header" />
         </div>
         <div className="font-['Sangkuriang']">
+    {wedDay ? <p className='my-4 font-lg text-gray-900'>Selamat Menempuh Hidup Baru</p> :
+      <>
           <p className='my-4 font-sm text-gray-500'>tinggal</p>
           <ul className='flex flex-wrap justify-center items-center gap-4'>
             <li className={timeDigitClass}><span className={timeDigitNumClass}>{timeRemain.days}</span> hari</li>
@@ -72,6 +79,8 @@ function Home() {
             <li className={timeDigitClass}><span className={timeDigitNumClass}>{timeRemain.seconds}</span> detik</li>
           </ul>
           <p className='my-4 font-sm text-gray-500'>lagi sampai hari-H</p>
+      </>
+    }
         </div>
       </article>
     </section>
