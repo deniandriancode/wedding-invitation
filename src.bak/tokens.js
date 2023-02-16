@@ -260,6 +260,7 @@ const names = [
     "Teh_Oos",
     "Agung_Rabbyt",
     "Dian_Sopian",
+    "Dzaky_Priceliano_Razzaq",
 ];
 
 for (const name of names) {

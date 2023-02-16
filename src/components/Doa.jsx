@@ -16,7 +16,18 @@ function MessageElem({ messageList }) {
     if (!messageList) {
         return (<></>);
     }
-    const rendered = messageList.map((item, index) => {
+    const msg = messageList.map(item => {
+	if (item.username.includes("Tiara Septia Muabrokah")) {
+	    item.username = "Tiara Septia Mubarokah";
+	    return item;
+	}
+	return item;
+    });
+    const messageListSort = msg.sort((x, y) => {
+	return x.username === "Wahyu Supriatna" || x.username === "Tiara Septia Mubarokah" ? 1 : y.username === "Wahyu Supriatna" || y.username === "Tiara Septia Mubarokah" ? -1 : 0;
+    });
+    console.log(messageListSort);
+    const rendered = messageListSort.map((item, index) => {
         return (
             <li className='bg-purple-200 p-2 mb-1 rounded text-start' key={uniqid()}>
                 <p className='text-[.80rem] text-gray-900'><span className='break-all inline-block px-2 rounded bg-purple-300'>{item.username.replace("S. Sos.", "").replace("M. Si.", "").replace("S. AB.", "")}</span></p>
