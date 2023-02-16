@@ -9,6 +9,7 @@ import HeaderElement from './HeaderElement';
 import { rootClass, containerClass } from '../utils/commonStyle';
 import { getQueryString } from '../utils/urlquery';
 import { encrypt, decrypt } from '../utils/cryptography';
+import { BsFillPinAngleFill } from 'react-icons/bs';
 
 const loadingIconStroke = 'rgb(147 51 234)';
 
@@ -26,14 +27,23 @@ function MessageElem({ messageList }) {
     const messageListSort = msg.sort((x, y) => {
 	return x.username === "Wahyu Supriatna" || x.username === "Tiara Septia Mubarokah" ? 1 : y.username === "Wahyu Supriatna" || y.username === "Tiara Septia Mubarokah" ? -1 : 0;
     });
-    console.log(messageListSort);
+
     const rendered = messageListSort.map((item, index) => {
-        return (
-            <li className='bg-purple-200 p-2 mb-1 rounded text-start' key={uniqid()}>
-                <p className='text-[.80rem] text-gray-900'><span className='break-all inline-block px-2 rounded bg-purple-300'>{item.username.replace("S. Sos.", "").replace("M. Si.", "").replace("S. AB.", "")}</span></p>
-                <p className='text-sm md:text-base text-gray-800 mt-1'>{item.message}</p>
-            </li>
-        );
+	if (item.username === "Wahyu Supriatna" || item.username === "Tiara Septia Mubarokah") {
+	    return (
+		<li className='bg-purple-200 p-2 mb-1 rounded text-start' key={uniqid()}>
+                    <p className='text-[.80rem] text-gray-900'><span className='break-all inline-block px-2 rounded bg-purple-300'>{item.username}&nbsp;&nbsp;<BsFillPinAngleFill className='text-gray-700 inline-block' /></span></p>
+                    <p className='text-sm md:text-base text-gray-800 mt-1'>{item.message}</p>
+		</li>
+            );
+	} else {
+	    return (
+		<li className='bg-purple-200 p-2 mb-1 rounded text-start' key={uniqid()}>
+                    <p className='text-[.80rem] text-gray-900'><span className='break-all inline-block px-2 rounded bg-purple-300'>{item.username.replace("S. Sos.", "").replace("M. Si.", "").replace("S. AB.", "")}</span></p>
+                    <p className='text-sm md:text-base text-gray-800 mt-1'>{item.message}</p>
+		</li>
+            );
+	}
     });
 
     return rendered.reverse();
