@@ -261,6 +261,16 @@ const names = [
     "Agung_Rabbyt",
     "Dian_Sopian",
     "Dzaky_Priceliano_Razzaq",
+    "Pak_Tetep",
+    "Yudi",
+    "Keluarga_Besar_MA_Nurul_Falah",
+    "Keluarga_Besar_MTs_Nurul_Falah",
+    "Pak_Asep",
+    "Bu_Nia",
+    "Dinar",
+    "Teh_Gina",
+    "Iden_Supriatna",
+    "Ucup_Supriyadi",
 ];
 
 for (const name of names) {

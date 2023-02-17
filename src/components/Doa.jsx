@@ -60,6 +60,11 @@ function Doa() {
 
     const [messageList, setMessageList] = useState([]);
     const [message, setMessage] = useState('');
+    const [isMarried, setIsMarried] = useState(false);
+
+    const now = new Date().getTime();
+    const wed = new Date("2023-02-18 08:00").getTime();
+
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -91,6 +96,9 @@ function Doa() {
     }
 
     useEffect(() => {
+	if (now >= wed) {
+	    setIsMarried(true);
+	}
         const url = 'https://peridot-eminent-seatbelt.glitch.me/';
         axios.get(url)
             .then((res) => {
@@ -110,8 +118,8 @@ function Doa() {
                 {/* <p className='text-sm'>untuk obrolan lebih seru, <a href="https://yuyu-yaya.github.io" className='underline text-purple-500' target="_blank">klik di sini.</a></p> */}
 
                 <form onSubmit={handleSubmit} className='flex flex-col gap-2 my-8'>
-                    <textarea spellCheck={false} className='transition rounded text-sm md:text-base outline-none bg-purple-50 border-gray-400 focus:border-purple-300 resize-none shadow' value={message} onChange={handleChange} placeholder='Tulis pesan' rows='4' />
-                    <button className='flex justify-center items-center gap-1 transition text-white bg-purple-400 hover:bg-purple-500 py-1 px-6 rounded shadow md:w-fit'><IoIosSend /> Kirim</button>
+                    <textarea spellCheck={false} className={`transition rounded text-sm md:text-base outline-none ${isMarried ? 'placeholder:text-gray-400 bg-gray-300 cursor-not-allowed' : 'bg-purple-50'} border-gray-400 focus:border-purple-300 resize-none shadow`} value={message} onChange={handleChange} placeholder='Tulis pesan' rows='4' disabled={isMarried ? true : false} />
+                    <button className={`flex justify-center items-center gap-1 transition text-white py-1 px-6 rounded shadow md:w-fit ${isMarried ? 'cursor-not-allowed bg-purple-200 hover:bg-purple-200 text-purple-300' : 'bg-purple-400 hover:bg-purple-500'}`} disabled={isMarried ? false : true}><IoIosSend /> Kirim</button>
                 </form>
 
                 <div className='mt-8 relative min-h-[50px] border-2 border-purple-400 rounded'>
